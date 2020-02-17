@@ -123,10 +123,40 @@ else
     System.out.println(error);
 }
 ```
+## 2.5 设置屏参
+以下为设置屏参方法
+注意：显示屏参数只需要在显示屏安装后使用一次即可。没有必要每次发送节目前都设置。
+```java 
+ControllerConfigBxFile bxFile = new ControllerConfigBxFile();
+bxFile.setControllerName("test");// 设置屏幕名称
+bxFile.setScreenWidth(128); // 设置显示屏的宽度 （单位：像素）
+bxFile.setScreenHeigth(96); // 设置显示屏的高度 （单位：像素）
+screen.writeConfig(bxFile); // 将参数文件写入控制器
+// 通常参数配置完后，控制器会进行重启，需等待一段时间再对控制器进行操作
+Thread.sleep(10000);
+```
+可以通过screen的getProfile方法取得控制器参数，也可以通过此方法验证控制器的参数是否正确
+```java
+Bx5GScreenProfile profile = screen.getProfile();
+org.apache.log4j.Logger.getLogger(BxClientDemo.class).info("screen width:"+profile.getWidth);
+org.apache.log4j.Logger.getLogger(BxClientDemo.class).info("screen heigth:"+profile.getHeigth);
+```
+注意：如果想提高发送节目的效率，且自己知道现实屏参的情况下，可以手动创建profile对象，screen.getProfile()此方式，是通过从控制器回读来自动创建profile的，使用方便，但是增加了PC与控制器之间的交互，从而使得发送效率降低。
+```java 
+profile = new Bx5GScreenProfile(128,96);
+profile.setMatrixType(Bx5GScreenProfile.ScreenMatrixType.COLOR3BYTE);
+```
 
-## 2.5 节目与区域
+
+## 2.6 节目与区域
 
 节目主要用于组合屏幕上现实的内容，它由多个区域组成。控制器同一时间只能播放一个集美，它是控制器现实内容可以单独更新的最小单位。
+创建节目过程通常如下：
+**1.创建PrograBxFile对象（节目文件）**
+**2.创建一个或多个Area对象（区域，可以是图文区，也可以是时间区等）**
+**3.如果是图文区（TextCaptionBxArea），可以创建page对象，按页将文本或图片添加到Area中**
+**4.将Area添加到节目中**
+**5.用screen对象将节目发送到控制器**
 以下，我们将按步骤创建一个节目，并将其发送到控制器进行显示
 
 ```java
@@ -191,7 +221,7 @@ screen.WriteProgram(p0);
 // 更新节目还有很多命令，请参考JAVADOC
 ```
 
-## 2.6 动态区
+## 2.7 动态区
 
 动态区是一种比较特殊的区域，其有以下几个主要特点：
 
@@ -247,7 +277,7 @@ area.addPage(page);
 screen.writeDynamic(rule,area);
 ```
 
-## 2.7 Server模式（包含GPRS）
+## 2.8 Server模式（包含GPRS）
 
 Server使用流程如下：
 
