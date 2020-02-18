@@ -152,11 +152,11 @@ profile.setMatrixType(Bx5GScreenProfile.ScreenMatrixType.COLOR3BYTE);
 
 节目主要用于组合屏幕上现实的内容，它由多个区域组成。控制器同一时间只能播放一个集美，它是控制器现实内容可以单独更新的最小单位。
 创建节目过程通常如下：
-**1.创建PrograBxFile对象（节目文件）**
-**2.创建一个或多个Area对象（区域，可以是图文区，也可以是时间区等）**
-**3.如果是图文区（TextCaptionBxArea），可以创建page对象，按页将文本或图片添加到Area中**
-**4.将Area添加到节目中**
-**5.用screen对象将节目发送到控制器**
+* 1.创建PrograBxFile对象（节目文件）
+* 2.创建一个或多个Area对象（区域，可以是图文区，也可以是时间区等）
+* 3.如果是图文区（TextCaptionBxArea），可以创建page对象，按页将文本或图片添加到Area中
+* 4.将Area添加到节目中
+* 5.用screen对象将节目发送到控制器
 以下，我们将按步骤创建一个节目，并将其发送到控制器进行显示
 
 ```java
@@ -166,6 +166,37 @@ Bx5GScreenProfile profile = screen.getProfile();
 ProgramBxFile p0 = new ProgramBxFile("P000",profile);
 // 关于节目类的其他接口可以参考ProgramBxFile类
 ```
+节目的其他常用接口
+```java 
+// 增加播放时间区段
+// 参数依次为 开始时 开始分 开始秒 结束时 结束分 结束秒
+p0.addPlayPeriodSetting(0,0,0,23,59,59);
+// 设定结束播放日
+p0.setEndDay(20);
+// 设定结束播放月
+po.setEndMonth(3);
+// 设定结束播放年
+p0.setEndYear(2021);
+// 设定是否显示边框
+// 需要注意的是，边框也需要占用屏幕的像素，加了节目边框后，区域坐标不能从/// （0,0）开始，会导致区域和节目边框重叠
+p0.setFrameShow(false);
+// 设定节目重复播放次数，多个节目时候生效
+p0.setProgramPlayTimes(3);
+// 设定节目播放时间长度，单位为秒s,0表示循环播放
+// 当控制器上有多个节目时，会根据此设定控制节目被播放的时长
+// 当控制器上只有一个节目时，此设定没有效果
+// 控制节目播放有效时间，可利用addPlayPeriodSetting规划。
+p0.setProgramTimeSpan(0);
+// 设定开始播放日
+p0.setStartDay(3);
+// 设定开始播放月
+p0.setStartMonth(5);
+// 设定开始播放年，有效年至2099，-1表示立即播放
+p0.setStartYear(2019);
+// 设定播放起始日
+p0.setupStartEndDate(java.util.Date startDate,java.util.Date endDate);
+```
+
 
 控制器支持的区域有很多种，例如：图文区、时间区、传感器区等。其中，最常用的是图文区。图文区可以支持显示文本和图片，文字或图片可以按数据也依次添加到图文区中，每页数据均可以设置特技方式，停留时间等属性
 创建图文区的步骤大致如下：
@@ -185,6 +216,106 @@ TextBxPage page = new TextBxPage("仰邦科技");
 area.addPage(page);
 // 将图文区添加到节目中
 p0.addArea(area);
+```
+
+区域的其他常用接口
+```java
+// 添加图片
+area.addImageFile("E:image/001.bmp");
+// 添加文字内容
+area.addText("显示内容",new Font("宋体",Font.PLAIN,12),Color.red,Color.black,styles[4]);
+// 清除所有页面
+area.clearPages();
+```
+数据页的其他常用接口
+```java 
+// 换行
+page.newLine("这是第二行");
+// 换行还有另一种办法，即
+page = new TextBxPage("第一行数据\r\n第二行数据");
+// 设定背景色
+page.setBackground(Color.black);
+// 设定文字颜色
+page.setForeground(Color.red);
+// 设定字型
+// 如果设定字型后，文字在LED屏上显示方块，请先检查程序所在的系统
+// 是否支持所设置的字型
+// 比如在Linux系统中，没有安装中文字体“宋体”，LED屏上会显示方块
+page.setFont(new Font("宋体",Font.PLAIN,12));
+// 设定首位相连
+// >=0 前后文字间隔的像素
+// -2 前后文字被隔离
+page.setHeadTailInterval(-2);
+// 设定水平对齐方式 
+// CENTER 居中
+// FAR 居右
+// NEAR 居左
+page.setHorizontalAlignment(TextBinary.Alignment.CENTER);
+// 设定垂直对齐方式
+// CENTER 居中
+// FAR 居下
+// NEAR 居上
+page.setVerticalAlignment(TextBinary.Alignment.CENTER);
+// 设定播放特效
+DisPlayStyle[] styles = DisPlayStyleFactory.getStyles().toArray(new DisPlayStyle[0]);
+// 0 随机显示
+// 1 静止显示
+// 2 快速打出
+// 3 向左移动
+// 4 向左连移
+// 5 向上移动
+// 6 向上连移
+// 7 闪烁
+// 8 飘雪
+// 9 冒泡
+// 10 中间移出
+// 11 左右移入
+// 12 左右交叉移入
+// 13 上下交叉移入
+// 14 画卷闭合
+// 15 画卷打开
+// 16 向左拉伸
+// 17 向右拉伸
+// 18 向上拉伸
+// 19 向下拉伸
+// 20 向左镭射
+// 21 向右镭射
+// 22 向上镭射
+// 23 向下镭射
+// 24 左右交叉拉幕
+// 25 上下交叉拉幕
+// 26 分散左拉
+// 27 水平百叶
+// 28 垂直百叶
+// 29 向左拉幕
+// 30 向右拉幕
+// 31 向上拉幕
+// 32 向下拉幕
+// 33 左右闭合
+// 34 左右对开
+// 35 上下闭合
+// 36 上下对开
+// 37 向右移动
+// 38 向右连移
+// 39 向下移动
+// 40 向下连移
+// 41 45度左旋
+// 42 180度左旋
+// 43 90度左旋
+// 44 45度右旋
+// 45 180度右旋
+// 46 90度右旋
+// 47 菱形打开
+// 48 菱形闭合
+
+page.setDisPlayStyle(styles[4]);
+// 设定重复次数
+page.setRepeatTime(1);
+// 设定速度等级0最快 63最慢
+page.setSpeed(18);
+// 设定停留时间
+page.setStayTime(30);
+
 ```
 
 关于时间区
@@ -213,12 +344,264 @@ p0.addArea(dtArea);
 // 关于DateTimeBxArea类的更多接口，请参考JAVADOC中相关类的说明
 ```
 
+
 更新节目
 
 ```java 
 // 以下为更新节目命令
 screen.WriteProgram(p0);
 // 更新节目还有很多命令，请参考JAVADOC
+```
+
+关于语音
+语音功能目前只有6代部分控制卡支持
+以下为一个完整的语音功能实例
+```java 
+public static void SendSound()throws Exception
+    {
+        Bx6GScreenClient screen = new Bx6GScreenClient( "MyScreen",new Bx6E() );
+
+        screen.connect( ip,port );
+
+        DisplayStyle[] styles = DisplayStyleFactory.getStyles().toArray(new DisplayStyle[0]);
+
+        ProgramBxFile pf = new ProgramBxFile( "P000",screen.getProfile() );
+
+        // 语音部分
+        TextCaptionBxArea area_sound = new TextCaptionBxArea( 0,0,160,16,screen.getProfile());
+        area_sound.setVoiceContent( "黑A12345请到淀粉副产品库DF-01月台" );// 该字符串会被语音播报
+        area_sound.setVoiceFlag( true );
+        area_sound.setVoiceReplayTimes( 2 );// 设置重复播报3次，如果不设置，默认一直播报
+        // 语音的其他设置都在area_sound中设置
+
+        // 显示部分_1
+        TextCaptionBxArea area_display_1 = new TextCaptionBxArea( 0,0,160,48,screen.getProfile() );
+        TextBxPage page_display_1 = new TextBxPage( "黑A12345" );
+        page_display_1.setFont( new Font( "宋体",Font.PLAIN,30 ) );
+        page_display_1.setVerticalAlignment( TextBinary.Alignment.CENTER );// 设置水平居中
+        page_display_1.setHorizontalAlignment( TextBinary.Alignment.CENTER );// 设置垂直居中
+        page_display_1.setDisplayStyle( styles[2] );
+        area_display_1.addPage( page_display_1 );
+
+        // 显示部分_2
+        TextCaptionBxArea area_display_2 = new TextCaptionBxArea( 0,48,160,48,screen.getProfile() );
+        TextBxPage page_diaplay_2 = new TextBxPage( "请到淀粉副产品库" );
+        page_diaplay_2.newLine( "DF-01月台" );
+        page_diaplay_2.setFont( new Font( "宋体",Font.PLAIN,16 ) );
+        page_diaplay_2.setVerticalAlignment( TextBinary.Alignment.CENTER );
+        page_diaplay_2.setHorizontalAlignment( TextBinary.Alignment.CENTER );
+        page_diaplay_2.setDisplayStyle( styles[2] );
+        area_display_2.addPage( page_diaplay_2 );
+
+        pf.addArea( area_sound );
+        pf.addArea( area_display_1 );
+        pf.addArea( area_display_2 );
+
+        screen.writeProgram( pf );
+
+        screen.disconnect();
+    }
+```
+关于文字转换图片
+有时候，需要将文字转换成图片，然后发送给控制器，在LED屏上显示，因为控制器不支持表格，需要将表格转换成图片，SDK不支持文字的旋转显示，需要将文字转换成图片等
+以下是将文字转换成图片类，仅供参考
+```java 
+import sun.awt.image.ImageFormatException;
+import javax.imageio.ImageIO;
+import javax.imageio.ImageReadParam;
+import javax.imageio.ImageReader;
+import javax.imageio.stream.ImageInputStream;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.awt.image.ImageObserver;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.net.PortUnreachableException;
+import java.utial.ArrayList;
+import java.utial.Iterator;
+import java.utial.List;
+
+public class TxtToBmpFactory
+{
+    private static final String TAG = "TxtToBmpFactory";
+
+    // 图片裁剪模式
+    private static final int CROP_LEFT_RIGHT = 0;
+
+    // Font
+    private Font font;
+
+    private int width = 16;
+    private int height = 16;
+    private int letterSpacing = 0;
+    private String text = "hello";
+    private int cropMode = CROP_LEFT_RIGHT;
+    private boolean underline = false;
+
+
+    public TxtToBmpFactory(int width, int height, String text, Font font) {
+        this.width = width;
+        this.height = height;
+        this.font = font;
+        this.text = text;
+    }
+
+
+    public List<BxBmpPage> create() {
+
+        // page list
+        List<BxBmpPage> bmps = new ArrayList();
+
+
+        BufferedImage preview = null;
+
+        // 获取文字属性
+        FontMetrics fm = sun.font.FontDesignMetrics.getMetrics(font);
+        int ascent = fm.getAscent();
+        int descent = fm.getDescent();
+
+        // 根据字体大小获取系统推荐的字体高度
+        int charHeight = descent + ascent;
+
+        // 字符个数
+        int charCount = text.length();
+
+        int dstX, dstY;
+
+        // 正常排列
+
+        // 整个字符串需要的宽度
+        // 每个字符的宽度可能会不一致
+        //int strWidth = (int)paint.measureText(text) + letterSpacing * (charCount - 1);
+        int strWidth = letterSpacing * (charCount - 1);
+        char[] chars = text.toCharArray();
+        for(int i=0; i<charCount; i++) {
+            //strWidth += (int)paint.measureText(text, i, i+1);
+            //strWidth += fm.charWidth(chars, i, i+1);
+            strWidth += fm.charWidth(chars[i]);
+        }
+
+        if(strWidth <= this.width) {
+
+            // 如果整个字符串的长度小于屏幕宽度
+            // 则只需按屏幕大小创建 bmp　文件
+            //preview = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+            preview = new BufferedImage(width, height, BufferedImage.TYPE_USHORT_565_RGB);
+
+            // 居中对齐
+            dstX = (this.width - strWidth) / 2;
+        }
+        else {
+
+            // 如果整个字符串的长度大于屏幕宽度
+            // 则需按字符串的长度大小创建 bmp 文件
+            //preview = Bitmap.createBitmap(strWidth, this.height, Bitmap.Config.ARGB_8888);
+            preview = new BufferedImage(strWidth, height, BufferedImage.TYPE_USHORT_565_RGB);
+
+            // 居左对齐
+            dstX = 0;
+        }
+
+        //Canvas canvas = new Canvas(preview);
+        Graphics2D g = preview.createGraphics();
+        g.setFont(font);
+        g.setColor(Color.RED);
+        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,RenderingHints.VALUE_ANTIALIAS_OFF);
+
+
+        // 垂直方向居中对齐
+        dstY = this.height/2 + Math.abs(ascent) - (charHeight/2);
+        dstY = (int) ((float)dstY * 0.95f);
+        //float ratio = (float)(ascent)*0.95f/(float)(ascent + descent);
+        //dstY = (int) (height * ratio);
+
+        g.translate(dstX, dstY);
+
+        int x = 0;
+        int y = 0;
+
+        for(int i=0; i<charCount; i++) {
+            String mChar = text.substring(i, i+1);
+            g.drawString(mChar, x, y);
+            x += fm.stringWidth(mChar);
+            x += letterSpacing;
+        }
+
+
+        // 图片分割
+        if(cropMode == CROP_LEFT_RIGHT) {
+            int pageNum = preview.getWidth() / width;
+            int i = 0;
+            for (i = 0; i < pageNum; i++) {
+                //BufferedImage bmp = new BufferedImage(preview, i * width, 0, width, height);
+                BufferedImage bmp = preview.getSubimage(i*width, 0, width, height);
+                BxBmpPage page = new BxBmpPage(bmp);
+                bmps.add(page);
+            }
+
+            if((preview.getWidth() % width) > 0) {
+                //Bitmap src = Bitmap.createBitmap(preview, i*width, 0, preview.getWidth()%width, height);
+                BufferedImage src = preview.getSubimage(i*width, 0, preview.getWidth()%width, height);
+
+                //Bitmap bmp = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+                BufferedImage bmp = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+                Graphics g1 = bmp.getGraphics();
+                g1.drawImage(src, 0, 0, src.getWidth(), src.getHeight(), new ImageObserver() {
+                    @Override
+                    public boolean imageUpdate(Image img, int infoflags, int x, int y, int width, int height) {
+                        return false;
+                    }
+                });
+
+                BxBmpPage page = new BxBmpPage(bmp, preview.getWidth()%width, height);
+                bmps.add(page);
+            }
+        }
+        else {
+
+        }
+
+        return bmps;
+    }
+
+
+    
+
+   public int getWidth(){return width;}
+
+    public void setWidth(int width)
+    {
+        this.width = width;
+    }
+
+    public int getHeight(){return height;}
+
+    public void setHeight(int height)
+    {
+        this.height = height;
+    }
+    
+    public String getText(){return text;}
+    
+    public void setText(String text)
+    {
+        this.text = text;
+    }
+    
+    public void getLetterSpacing()
+    {
+        return letterSpacing + 4;
+    }
+    
+    public void setLetterSpacing(int letterSpacing)
+    {
+        this.letterSpacing = letterSpacing - 4;
+    }
+    
+    public Font getFont(){return font;}
+    
+    public void setFont(Font font){this.font = font;}
+}
 ```
 
 ## 2.7 动态区
