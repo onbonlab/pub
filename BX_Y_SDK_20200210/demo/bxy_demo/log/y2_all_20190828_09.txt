@@ -1,0 +1,104 @@
+INFO  09:54:46.017 onbon.y2.Y2Env                                          85   - POM.groupId:    com.onbon.y2
+INFO  09:54:46.081 onbon.y2.Y2Env                                          86   - POM.artifactId: y2
+INFO  09:54:46.081 onbon.y2.Y2Env                                          87   - POM.version:    0.2.0-SNAPSHOT
+INFO  09:54:46.081 onbon.y2.Y2Env                                          88   - API.version:    0.2.190812A
+INFO  09:54:46.083 onbon.y2.Y2Env                                          89   - HTTP.driver:    onbon.y2.http.hc.Y2ApacheHttpClient
+DEBUG 09:54:47.291 org.apache.http.client.protocol.RequestAddCookies       123  - CookieSpec selected: default
+DEBUG 09:54:47.305 org.apache.http.client.protocol.RequestAuthCache        77   - Auth cache not set in the context
+DEBUG 09:54:47.342 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 255  - Connection request: [route: {}->http://http:192][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG 09:54:47.359 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 288  - Connection leased: [id: 0][route: {}->http://http:192][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 09:54:47.365 org.apache.http.impl.execchain.MainClientExec           235  - Opening connection {}->http://http:192
+DEBUG 09:54:49.630 org.apache.http.impl.conn.DefaultManagedHttpClientConnection 96   - http-outgoing-0: Shutdown connection
+DEBUG 09:54:49.631 org.apache.http.impl.execchain.MainClientExec           129  - Connection discarded
+DEBUG 09:54:49.632 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 326  - Connection released: [id: 0][route: {}->http://http:192][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG 09:54:49.633 org.apache.http.client.protocol.RequestAddCookies       123  - CookieSpec selected: default
+DEBUG 09:54:49.634 org.apache.http.client.protocol.RequestAuthCache        77   - Auth cache not set in the context
+DEBUG 09:54:49.635 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 255  - Connection request: [route: {}->http://http:192][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG 09:54:49.636 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 288  - Connection leased: [id: 1][route: {}->http://http:192][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 09:54:49.636 org.apache.http.impl.execchain.MainClientExec           235  - Opening connection {}->http://http:192
+DEBUG 09:54:49.637 org.apache.http.impl.conn.DefaultManagedHttpClientConnection 96   - http-outgoing-1: Shutdown connection
+DEBUG 09:54:49.637 org.apache.http.impl.execchain.MainClientExec           129  - Connection discarded
+DEBUG 09:54:49.638 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 326  - Connection released: [id: 1][route: {}->http://http:192][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG 09:54:49.639 org.apache.http.client.protocol.RequestAddCookies       123  - CookieSpec selected: default
+DEBUG 09:54:49.640 org.apache.http.client.protocol.RequestAuthCache        77   - Auth cache not set in the context
+DEBUG 09:54:49.641 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 255  - Connection request: [route: {}->http://http:192][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG 09:54:49.642 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 288  - Connection leased: [id: 2][route: {}->http://http:192][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 09:54:49.642 org.apache.http.impl.execchain.MainClientExec           235  - Opening connection {}->http://http:192
+DEBUG 09:54:49.643 org.apache.http.impl.conn.DefaultManagedHttpClientConnection 96   - http-outgoing-2: Shutdown connection
+DEBUG 09:54:49.644 org.apache.http.impl.execchain.MainClientExec           129  - Connection discarded
+DEBUG 09:54:49.645 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 326  - Connection released: [id: 2][route: {}->http://http:192][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+ERROR 09:54:49.648 onbon.y2.Y2Controller                                   259  - http://http:192.168.100.202 login failed
+java.net.UnknownHostException: http
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at onbon.y2.http.hc.Y2ApacheHttpClient.execute(Y2ApacheHttpClient.java:217)
+	at onbon.y2.http.hc.Y2ApacheHttpClient.postJson(Y2ApacheHttpClient.java:111)
+	at onbon.y2.http.hc.Y2ApacheHttpClient.postJson(Y2ApacheHttpClient.java:103)
+	at onbon.y2.Y2Controller.logIn(Y2Controller.java:193)
+	at onbon.y2.Y2Screen.login(Y2Screen.java:157)
+	at bxy_demo.SendProgram(bxy_demo.java:30)
+	at bxy_demo.main(bxy_demo.java:20)
+INFO  09:55:55.624 onbon.y2.Y2Env                                          85   - POM.groupId:    com.onbon.y2
+INFO  09:55:55.627 onbon.y2.Y2Env                                          86   - POM.artifactId: y2
+INFO  09:55:55.627 onbon.y2.Y2Env                                          87   - POM.version:    0.2.0-SNAPSHOT
+INFO  09:55:55.627 onbon.y2.Y2Env                                          88   - API.version:    0.2.190812A
+INFO  09:55:55.629 onbon.y2.Y2Env                                          89   - HTTP.driver:    onbon.y2.http.hc.Y2ApacheHttpClient
+DEBUG 09:55:56.892 org.apache.http.client.protocol.RequestAddCookies       123  - CookieSpec selected: default
+DEBUG 09:55:56.904 org.apache.http.client.protocol.RequestAuthCache        77   - Auth cache not set in the context
+DEBUG 09:55:56.908 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 255  - Connection request: [route: {}->http://http:192][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG 09:55:56.931 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 288  - Connection leased: [id: 0][route: {}->http://http:192][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 09:55:56.936 org.apache.http.impl.execchain.MainClientExec           235  - Opening connection {}->http://http:192
+DEBUG 09:55:59.204 org.apache.http.impl.conn.DefaultManagedHttpClientConnection 96   - http-outgoing-0: Shutdown connection
+DEBUG 09:55:59.206 org.apache.http.impl.execchain.MainClientExec           129  - Connection discarded
+DEBUG 09:55:59.207 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 326  - Connection released: [id: 0][route: {}->http://http:192][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG 09:55:59.208 org.apache.http.client.protocol.RequestAddCookies       123  - CookieSpec selected: default
+DEBUG 09:55:59.208 org.apache.http.client.protocol.RequestAuthCache        77   - Auth cache not set in the context
+DEBUG 09:55:59.209 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 255  - Connection request: [route: {}->http://http:192][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG 09:55:59.210 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 288  - Connection leased: [id: 1][route: {}->http://http:192][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 09:55:59.211 org.apache.http.impl.execchain.MainClientExec           235  - Opening connection {}->http://http:192
+DEBUG 09:55:59.211 org.apache.http.impl.conn.DefaultManagedHttpClientConnection 96   - http-outgoing-1: Shutdown connection
+DEBUG 09:55:59.212 org.apache.http.impl.execchain.MainClientExec           129  - Connection discarded
+DEBUG 09:55:59.213 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 326  - Connection released: [id: 1][route: {}->http://http:192][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG 09:55:59.214 org.apache.http.client.protocol.RequestAddCookies       123  - CookieSpec selected: default
+DEBUG 09:55:59.214 org.apache.http.client.protocol.RequestAuthCache        77   - Auth cache not set in the context
+DEBUG 09:55:59.215 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 255  - Connection request: [route: {}->http://http:192][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG 09:55:59.216 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 288  - Connection leased: [id: 2][route: {}->http://http:192][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 09:55:59.216 org.apache.http.impl.execchain.MainClientExec           235  - Opening connection {}->http://http:192
+DEBUG 09:55:59.217 org.apache.http.impl.conn.DefaultManagedHttpClientConnection 96   - http-outgoing-2: Shutdown connection
+DEBUG 09:55:59.218 org.apache.http.impl.execchain.MainClientExec           129  - Connection discarded
+DEBUG 09:55:59.218 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 326  - Connection released: [id: 2][route: {}->http://http:192][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+ERROR 09:55:59.221 onbon.y2.Y2Controller                                   259  - http://http:192.168.100.202 login failed
+java.net.UnknownHostException: http
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:359)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at onbon.y2.http.hc.Y2ApacheHttpClient.execute(Y2ApacheHttpClient.java:217)
+	at onbon.y2.http.hc.Y2ApacheHttpClient.postJson(Y2ApacheHttpClient.java:111)
+	at onbon.y2.http.hc.Y2ApacheHttpClient.postJson(Y2ApacheHttpClient.java:103)
+	at onbon.y2.Y2Controller.logIn(Y2Controller.java:193)
+	at onbon.y2.Y2Screen.login(Y2Screen.java:157)
+	at bxy_demo.SendProgram(bxy_demo.java:30)
+	at bxy_demo.main(bxy_demo.java:20)

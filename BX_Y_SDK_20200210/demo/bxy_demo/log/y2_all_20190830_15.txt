@@ -1,0 +1,27 @@
+INFO  15:30:00.404 onbon.y2.Y2Env                                          85   - POM.groupId:    com.onbon.y2
+INFO  15:30:00.464 onbon.y2.Y2Env                                          86   - POM.artifactId: y2
+INFO  15:30:00.464 onbon.y2.Y2Env                                          87   - POM.version:    0.2.0-SNAPSHOT
+INFO  15:30:00.464 onbon.y2.Y2Env                                          88   - API.version:    0.2.190812A
+INFO  15:30:00.464 onbon.y2.Y2Env                                          89   - HTTP.driver:    onbon.y2.http.hc.Y2ApacheHttpClient
+ERROR 15:30:00.934 uia.comm.DatagramClient                                 177  - client> listen failed on 192.168.100.100:10003, broadcastPort:10002
+java.net.BindException: Cannot assign requested address: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.DatagramChannelImpl.bind(DatagramChannelImpl.java:691)
+	at sun.nio.ch.DatagramSocketAdaptor.bind(DatagramSocketAdaptor.java:91)
+	at uia.comm.DatagramClient.tryConnect(DatagramClient.java:157)
+	at uia.comm.DatagramClient.connect(DatagramClient.java:128)
+	at onbon.y2.Y2ScreenFactory.start(Y2ScreenFactory.java:378)
+	at onbon.y2.Y2ScreenFactory.start(Y2ScreenFactory.java:355)
+	at Y2ScreenFactoryTest.test31(Y2ScreenFactoryTest.java:30)
+	at bxy_demo.main(bxy_demo.java:28)
+INFO  15:31:47.381 onbon.y2.Y2Env                                          85   - POM.groupId:    com.onbon.y2
+INFO  15:31:47.391 onbon.y2.Y2Env                                          86   - POM.artifactId: y2
+INFO  15:31:47.391 onbon.y2.Y2Env                                          87   - POM.version:    0.2.0-SNAPSHOT
+INFO  15:31:47.391 onbon.y2.Y2Env                                          88   - API.version:    0.2.190812A
+INFO  15:31:47.391 onbon.y2.Y2Env                                          89   - HTTP.driver:    onbon.y2.http.hc.Y2ApacheHttpClient
+INFO  15:31:48.001 uia.comm.DatagramClient                                 168  - client> listen on 192.168.100.200:10003, broadcastPort:10002
+DEBUG 15:31:48.081 uia.comm.DatagramDataController                         106  - client> send 02-1b-60-42-32-40-2f-5b-34-57-38-54-76-4c-37-15-7b-1a-77-12-30-0a-28-71-20-0d-4e-01-4c-7e-5c-70-52-24-41-33-40-29-46-28-0a-30-12-23-0d-3d-1f-33-11-63-06-6b-04-70-15-73-06-68-0b-7f-16-79-17-35-0f-74-56-38-59-34-51-73-49-6b-18-7d-1c-6e-0d-65-26-49-27-53-21-4e-22-4e-2b-59-7b-57-75-1c-72-02-77-03-21-1b ... total:175
+DEBUG 15:31:48.341 uia.comm.DatagramDataController                         201  - client> is receiving: 351
+DEBUG 15:31:48.341 uia.comm.DatagramClient                                 297  - client> cmd:1 callIn
+INFO  15:31:53.137 uia.comm.DatagramClient                                 210  - client> disconnect

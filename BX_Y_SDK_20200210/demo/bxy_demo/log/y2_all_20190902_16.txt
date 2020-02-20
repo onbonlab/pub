@@ -1,0 +1,755 @@
+INFO  16:07:22.476 onbon.y2.Y2Env                                          85   - POM.groupId:    com.onbon.y2
+INFO  16:07:22.486 onbon.y2.Y2Env                                          86   - POM.artifactId: y2
+INFO  16:07:22.486 onbon.y2.Y2Env                                          87   - POM.version:    0.2.0-SNAPSHOT
+INFO  16:07:22.486 onbon.y2.Y2Env                                          88   - API.version:    0.2.190902F
+INFO  16:07:22.486 onbon.y2.Y2Env                                          89   - HTTP.driver:    onbon.y2.http.hc.Y2ApacheHttpClient
+DEBUG 16:07:23.926 org.apache.http.client.protocol.RequestAddCookies       123  - CookieSpec selected: default
+DEBUG 16:07:23.934 org.apache.http.client.protocol.RequestAuthCache        77   - Auth cache not set in the context
+DEBUG 16:07:23.944 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 255  - Connection request: [route: {}->http://192.168.100.202:80][total kept alive: 0; route allocated: 0 of 2; total allocated: 0 of 20]
+DEBUG 16:07:23.964 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 288  - Connection leased: [id: 0][route: {}->http://192.168.100.202:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 16:07:23.964 org.apache.http.impl.execchain.MainClientExec           235  - Opening connection {}->http://192.168.100.202:80
+DEBUG 16:07:23.974 org.apache.http.impl.conn.DefaultHttpClientConnectionOperator 139  - Connecting to /192.168.100.202:80
+DEBUG 16:07:23.974 org.apache.http.impl.conn.DefaultHttpClientConnectionOperator 146  - Connection established 192.168.100.200:63455<->192.168.100.202:80
+DEBUG 16:07:23.974 org.apache.http.impl.execchain.MainClientExec           256  - Executing request POST / HTTP/1.1
+DEBUG 16:07:23.974 org.apache.http.impl.execchain.MainClientExec           261  - Target auth state: UNCHALLENGED
+DEBUG 16:07:23.974 org.apache.http.impl.execchain.MainClientExec           267  - Proxy auth state: UNCHALLENGED
+DEBUG 16:07:23.984 org.apache.http.headers                                 133  - http-outgoing-0 >> POST / HTTP/1.1
+DEBUG 16:07:23.984 org.apache.http.headers                                 136  - http-outgoing-0 >> Content-Length: 188
+DEBUG 16:07:23.984 org.apache.http.headers                                 136  - http-outgoing-0 >> Content-Type: application/json; charset=UTF-8
+DEBUG 16:07:23.984 org.apache.http.headers                                 136  - http-outgoing-0 >> Host: 192.168.100.202
+DEBUG 16:07:23.984 org.apache.http.headers                                 136  - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG 16:07:23.984 org.apache.http.headers                                 136  - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+DEBUG 16:07:23.984 org.apache.http.headers                                 136  - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG 16:07:23.984 org.apache.http.wire                                    73   - http-outgoing-0 >> "POST / HTTP/1.1[\r][\n]"
+DEBUG 16:07:23.984 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Length: 188[\r][\n]"
+DEBUG 16:07:23.984 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+DEBUG 16:07:23.984 org.apache.http.wire                                    73   - http-outgoing-0 >> "Host: 192.168.100.202[\r][\n]"
+DEBUG 16:07:23.984 org.apache.http.wire                                    73   - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG 16:07:23.984 org.apache.http.wire                                    73   - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)[\r][\n]"
+DEBUG 16:07:23.984 org.apache.http.wire                                    73   - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG 16:07:23.984 org.apache.http.wire                                    73   - http-outgoing-0 >> "[\r][\n]"
+DEBUG 16:07:23.984 org.apache.http.wire                                    73   - http-outgoing-0 >> "{[\n]"
+DEBUG 16:07:23.984 org.apache.http.wire                                    73   - http-outgoing-0 >> "  "protocol": {[\n]"
+DEBUG 16:07:23.984 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "name": "YQ-COM2",[\n]"
+DEBUG 16:07:23.994 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "version": "1.0",[\n]"
+DEBUG 16:07:23.994 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "remotefunction": {[\n]"
+DEBUG 16:07:23.994 org.apache.http.wire                                    73   - http-outgoing-0 >> "      "name": "getVerificationCode",[\n]"
+DEBUG 16:07:23.994 org.apache.http.wire                                    73   - http-outgoing-0 >> "      "input": {[\n]"
+DEBUG 16:07:23.994 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "username": "guest"[\n]"
+DEBUG 16:07:23.994 org.apache.http.wire                                    73   - http-outgoing-0 >> "      }[\n]"
+DEBUG 16:07:23.994 org.apache.http.wire                                    73   - http-outgoing-0 >> "    }[\n]"
+DEBUG 16:07:23.994 org.apache.http.wire                                    73   - http-outgoing-0 >> "  }[\n]"
+DEBUG 16:07:23.994 org.apache.http.wire                                    87   - http-outgoing-0 >> "}"
+DEBUG 16:07:24.004 org.apache.http.wire                                    73   - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG 16:07:24.004 org.apache.http.wire                                    73   - http-outgoing-0 << "Server: nginx/1.10.1[\r][\n]"
+DEBUG 16:07:24.004 org.apache.http.wire                                    73   - http-outgoing-0 << "Date: Mon, 02 Sep 2019 08:07:25 GMT[\r][\n]"
+DEBUG 16:07:24.004 org.apache.http.wire                                    73   - http-outgoing-0 << "Content-Type: application/json[\r][\n]"
+DEBUG 16:07:24.004 org.apache.http.wire                                    73   - http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG 16:07:24.004 org.apache.http.wire                                    73   - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+DEBUG 16:07:24.004 org.apache.http.wire                                    73   - http-outgoing-0 << "[\r][\n]"
+DEBUG 16:07:24.004 org.apache.http.wire                                    73   - http-outgoing-0 << "6b[\r][\n]"
+DEBUG 16:07:24.004 org.apache.http.wire                                    73   - http-outgoing-0 << "{"remotefunction": {"name": "getverificationcode", "output": {"verificationcode": "20190902160725915977"}}}[\r][\n]"
+DEBUG 16:07:24.004 org.apache.http.wire                                    73   - http-outgoing-0 << "0[\r][\n]"
+DEBUG 16:07:24.004 org.apache.http.wire                                    73   - http-outgoing-0 << "[\r][\n]"
+DEBUG 16:07:24.014 org.apache.http.headers                                 122  - http-outgoing-0 << HTTP/1.1 200 OK
+DEBUG 16:07:24.014 org.apache.http.headers                                 125  - http-outgoing-0 << Server: nginx/1.10.1
+DEBUG 16:07:24.014 org.apache.http.headers                                 125  - http-outgoing-0 << Date: Mon, 02 Sep 2019 08:07:25 GMT
+DEBUG 16:07:24.014 org.apache.http.headers                                 125  - http-outgoing-0 << Content-Type: application/json
+DEBUG 16:07:24.014 org.apache.http.headers                                 125  - http-outgoing-0 << Transfer-Encoding: chunked
+DEBUG 16:07:24.014 org.apache.http.headers                                 125  - http-outgoing-0 << Connection: keep-alive
+DEBUG 16:07:24.014 org.apache.http.impl.execchain.MainClientExec           285  - Connection can be kept alive indefinitely
+DEBUG 16:07:24.024 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 320  - Connection [id: 0][route: {}->http://192.168.100.202:80] can be kept alive indefinitely
+DEBUG 16:07:24.024 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 326  - Connection released: [id: 0][route: {}->http://192.168.100.202:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 16:07:24.034 org.apache.http.client.protocol.RequestAddCookies       123  - CookieSpec selected: default
+DEBUG 16:07:24.034 org.apache.http.client.protocol.RequestAuthCache        77   - Auth cache not set in the context
+DEBUG 16:07:24.044 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 255  - Connection request: [route: {}->http://192.168.100.202:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 16:07:24.044 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 288  - Connection leased: [id: 0][route: {}->http://192.168.100.202:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 16:07:24.044 org.apache.http.impl.execchain.MainClientExec           256  - Executing request POST / HTTP/1.1
+DEBUG 16:07:24.044 org.apache.http.impl.execchain.MainClientExec           261  - Target auth state: UNCHALLENGED
+DEBUG 16:07:24.044 org.apache.http.impl.execchain.MainClientExec           267  - Proxy auth state: UNCHALLENGED
+DEBUG 16:07:24.044 org.apache.http.headers                                 133  - http-outgoing-0 >> POST / HTTP/1.1
+DEBUG 16:07:24.044 org.apache.http.headers                                 136  - http-outgoing-0 >> Content-Length: 294
+DEBUG 16:07:24.044 org.apache.http.headers                                 136  - http-outgoing-0 >> Content-Type: application/json; charset=UTF-8
+DEBUG 16:07:24.044 org.apache.http.headers                                 136  - http-outgoing-0 >> Host: 192.168.100.202
+DEBUG 16:07:24.044 org.apache.http.headers                                 136  - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG 16:07:24.044 org.apache.http.headers                                 136  - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+DEBUG 16:07:24.044 org.apache.http.headers                                 136  - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "POST / HTTP/1.1[\r][\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Length: 294[\r][\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "Host: 192.168.100.202[\r][\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)[\r][\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "[\r][\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "{[\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "  "protocol": {[\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "name": "YQ-COM2",[\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "version": "1.0",[\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "remotefunction": {[\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "      "name": "userLogin",[\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "      "input": {[\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "username": "guest",[\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "verificationcode": "20190902160725915977",[\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "password": "ab3c6badfe7e9217e8daf03e0f484d36c0eee8cc"[\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "      }[\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "    }[\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    73   - http-outgoing-0 >> "  }[\n]"
+DEBUG 16:07:24.044 org.apache.http.wire                                    87   - http-outgoing-0 >> "}"
+DEBUG 16:07:24.084 org.apache.http.wire                                    73   - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG 16:07:24.084 org.apache.http.wire                                    73   - http-outgoing-0 << "Server: nginx/1.10.1[\r][\n]"
+DEBUG 16:07:24.094 org.apache.http.wire                                    73   - http-outgoing-0 << "Date: Mon, 02 Sep 2019 08:07:26 GMT[\r][\n]"
+DEBUG 16:07:24.094 org.apache.http.wire                                    73   - http-outgoing-0 << "Content-Type: application/json[\r][\n]"
+DEBUG 16:07:24.094 org.apache.http.wire                                    73   - http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG 16:07:24.094 org.apache.http.wire                                    73   - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+DEBUG 16:07:24.094 org.apache.http.wire                                    73   - http-outgoing-0 << "[\r][\n]"
+DEBUG 16:07:24.094 org.apache.http.wire                                    73   - http-outgoing-0 << "66[\r][\n]"
+DEBUG 16:07:24.094 org.apache.http.wire                                    73   - http-outgoing-0 << "{"remotefunction": {"name": "userlogin", "output": {"sessionID": "04ce8c23a9119264c5a315fc6d3e7c37"}}}[\r][\n]"
+DEBUG 16:07:24.094 org.apache.http.wire                                    73   - http-outgoing-0 << "0[\r][\n]"
+DEBUG 16:07:24.094 org.apache.http.wire                                    73   - http-outgoing-0 << "[\r][\n]"
+DEBUG 16:07:24.094 org.apache.http.headers                                 122  - http-outgoing-0 << HTTP/1.1 200 OK
+DEBUG 16:07:24.094 org.apache.http.headers                                 125  - http-outgoing-0 << Server: nginx/1.10.1
+DEBUG 16:07:24.094 org.apache.http.headers                                 125  - http-outgoing-0 << Date: Mon, 02 Sep 2019 08:07:26 GMT
+DEBUG 16:07:24.094 org.apache.http.headers                                 125  - http-outgoing-0 << Content-Type: application/json
+DEBUG 16:07:24.094 org.apache.http.headers                                 125  - http-outgoing-0 << Transfer-Encoding: chunked
+DEBUG 16:07:24.094 org.apache.http.headers                                 125  - http-outgoing-0 << Connection: keep-alive
+DEBUG 16:07:24.094 org.apache.http.impl.execchain.MainClientExec           285  - Connection can be kept alive indefinitely
+DEBUG 16:07:24.094 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 320  - Connection [id: 0][route: {}->http://192.168.100.202:80] can be kept alive indefinitely
+DEBUG 16:07:24.094 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 326  - Connection released: [id: 0][route: {}->http://192.168.100.202:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+INFO  16:07:24.094 onbon.y2.Y2Controller                                   241  - http://192.168.100.202 login, session = 04ce8c23a9119264c5a315fc6d3e7c37, user = guest
+INFO  16:07:24.104 onbon.y2.Y2Controller                                   597  - null> 04ce8c> getProperty         : req = {
+  "protocol": {
+    "name": "YQ-COM2",
+    "version": "1.0",
+    "remotefunction": {
+      "name": "getProperty",
+      "input": {
+        "apipaddress": "",
+        "apssid": "",
+        "barcode": "",
+        "brightness": "",
+        "brightnessmode": "",
+        "cloudip": "",
+        "cloudport": "",
+        "clouduserid": "",
+        "controllername": "",
+        "controllertype": "",
+        "customscreenstatus": "",
+        "dnsserver": "",
+        "firmwareversion": "",
+        "foldcount": "",
+        "foldheight": "",
+        "foldtype": "",
+        "foldwidth": "",
+        "fpgaversion": "",
+        "ftploginname": "",
+        "ftploginpassword": "",
+        "ftpserveraddr": "",
+        "ftpserverport": "",
+        "gateway": "",
+        "height": "",
+        "httpserverport": "",
+        "i2cnum": "",
+        "ip": "",
+        "ipflag": "",
+        "ipmode": "",
+        "loglevel": "",
+        "mac": "",
+        "optimizedspeed": "",
+        "outputtype": "",
+        "pid": "",
+        "playerversion": "",
+        "playlist": "",
+        "programlockedname": "",
+        "programlockedstatus": "",
+        "reliedversion": "",
+        "restartnetwork": "",
+        "scheduletaskflag": "",
+        "screendata": "",
+        "screenlockedstatus": "",
+        "screenonoffstatus": "",
+        "serverip": "",
+        "servermode": "",
+        "serverport": "",
+        "storagemedia": "",
+        "subnetmask": "",
+        "timezone": "",
+        "timezoneflag": "",
+        "timezoneserver": "",
+        "volume": "",
+        "width": "",
+        "wificonnectmode": "",
+        "wifigateway": "",
+        "wifisubnetmask": ""
+      }
+    }
+  }
+}
+DEBUG 16:07:24.104 org.apache.http.client.protocol.RequestAddCookies       123  - CookieSpec selected: default
+DEBUG 16:07:24.104 org.apache.http.client.protocol.RequestAuthCache        77   - Auth cache not set in the context
+DEBUG 16:07:24.104 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 255  - Connection request: [route: {}->http://192.168.100.202:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 16:07:24.104 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 288  - Connection leased: [id: 0][route: {}->http://192.168.100.202:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 16:07:24.104 org.apache.http.impl.execchain.MainClientExec           256  - Executing request POST /;stok=04ce8c23a9119264c5a315fc6d3e7c37 HTTP/1.1
+DEBUG 16:07:24.104 org.apache.http.impl.execchain.MainClientExec           261  - Target auth state: UNCHALLENGED
+DEBUG 16:07:24.104 org.apache.http.impl.execchain.MainClientExec           267  - Proxy auth state: UNCHALLENGED
+DEBUG 16:07:24.104 org.apache.http.headers                                 133  - http-outgoing-0 >> POST /;stok=04ce8c23a9119264c5a315fc6d3e7c37 HTTP/1.1
+DEBUG 16:07:24.104 org.apache.http.headers                                 136  - http-outgoing-0 >> Content-Length: 1674
+DEBUG 16:07:24.104 org.apache.http.headers                                 136  - http-outgoing-0 >> Content-Type: application/json; charset=UTF-8
+DEBUG 16:07:24.104 org.apache.http.headers                                 136  - http-outgoing-0 >> Host: 192.168.100.202
+DEBUG 16:07:24.104 org.apache.http.headers                                 136  - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG 16:07:24.104 org.apache.http.headers                                 136  - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+DEBUG 16:07:24.104 org.apache.http.headers                                 136  - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG 16:07:24.104 org.apache.http.wire                                    73   - http-outgoing-0 >> "POST /;stok=04ce8c23a9119264c5a315fc6d3e7c37 HTTP/1.1[\r][\n]"
+DEBUG 16:07:24.104 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Length: 1674[\r][\n]"
+DEBUG 16:07:24.104 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+DEBUG 16:07:24.104 org.apache.http.wire                                    73   - http-outgoing-0 >> "Host: 192.168.100.202[\r][\n]"
+DEBUG 16:07:24.104 org.apache.http.wire                                    73   - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG 16:07:24.104 org.apache.http.wire                                    73   - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)[\r][\n]"
+DEBUG 16:07:24.104 org.apache.http.wire                                    73   - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG 16:07:24.104 org.apache.http.wire                                    73   - http-outgoing-0 >> "[\r][\n]"
+DEBUG 16:07:24.104 org.apache.http.wire                                    73   - http-outgoing-0 >> "{[\n]"
+DEBUG 16:07:24.104 org.apache.http.wire                                    73   - http-outgoing-0 >> "  "protocol": {[\n]"
+DEBUG 16:07:24.104 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "name": "YQ-COM2",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "version": "1.0",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "remotefunction": {[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "      "name": "getProperty",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "      "input": {[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "apipaddress": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "apssid": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "barcode": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "brightness": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "brightnessmode": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "cloudip": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "cloudport": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "clouduserid": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "controllername": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "controllertype": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "customscreenstatus": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "dnsserver": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "firmwareversion": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "foldcount": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "foldheight": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "foldtype": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "foldwidth": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "fpgaversion": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "ftploginname": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "ftploginpassword": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "ftpserveraddr": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "ftpserverport": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "gateway": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "height": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "httpserverport": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "i2cnum": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "ip": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "ipflag": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "ipmode": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "loglevel": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "mac": "",[\n]"
+DEBUG 16:07:24.114 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "optimizedspeed": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "outputtype": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "pid": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "playerversion": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "playlist": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "programlockedname": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "programlockedstatus": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "reliedversion": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "restartnetwork": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "scheduletaskflag": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "screendata": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "screenlockedstatus": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "screenonoffstatus": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "serverip": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "servermode": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "serverport": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "storagemedia": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "subnetmask": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "timezone": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "timezoneflag": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "timezoneserver": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "volume": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "width": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "wificonnectmode": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "wifigateway": "",[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "wifisubnetmask": ""[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "      }[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "    }[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    73   - http-outgoing-0 >> "  }[\n]"
+DEBUG 16:07:24.124 org.apache.http.wire                                    87   - http-outgoing-0 >> "}"
+DEBUG 16:07:24.274 org.apache.http.wire                                    73   - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG 16:07:24.274 org.apache.http.wire                                    73   - http-outgoing-0 << "Server: nginx/1.10.1[\r][\n]"
+DEBUG 16:07:24.274 org.apache.http.wire                                    73   - http-outgoing-0 << "Date: Mon, 02 Sep 2019 08:07:26 GMT[\r][\n]"
+DEBUG 16:07:24.274 org.apache.http.wire                                    73   - http-outgoing-0 << "Content-Type: application/json[\r][\n]"
+DEBUG 16:07:24.274 org.apache.http.wire                                    73   - http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG 16:07:24.274 org.apache.http.wire                                    73   - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+DEBUG 16:07:24.274 org.apache.http.wire                                    73   - http-outgoing-0 << "[\r][\n]"
+DEBUG 16:07:24.274 org.apache.http.wire                                    73   - http-outgoing-0 << "5e0[\r][\n]"
+DEBUG 16:07:24.274 org.apache.http.wire                                    73   - http-outgoing-0 << "{"remotefunction": {"name": "getproperty", "output": {"apipaddress": "192.168.22.1", "apssid": "onbon_yq", "barcode": "C0Y0401807210014", "brightness": "255", "brightnessmode": "system", "cloudip": "139.196.231.196", "cloudport": "3802", "clouduserid": "", "controllername": "", "controllertype": "8280", "customscreenstatus": "", "dnsserver": "192.168.100.1", "firmwareversion": "19042400", "foldcount": "1", "foldheight": "[]", "foldtype": "0", "foldwidth": "[]", "fpgaversion": "18060603", "ftploginname": "", "ftploginpassword": "", "ftpserveraddr": "", "ftpserverport": "", "gateway": "192.168.100.1", "height": "96", "httpserverport": "80", "i2cnum": "2", "ip": "192.168.100.202", "ipflag": "1", "ipmode": "static", "loglevel": "INFO", "mac": "02:FF:FF:BF:C9:B1", "optimizedspeed": "on", "outputtype": "LCD", "pid": "50C811344D45594D411000001E1BF50B", "playerversion": "19042400", "playlist": "lists/c274df1b33f6f95bb15773455fb9d2cc.xml", "programlockedname": "", "programlockedstatus": "off", "reliedversion": "10010100", "restartnetwork": "completed", "scheduletaskflag": "false", "screendata": "1", "screenlockedstatus": "0", "screenonoffstatus": "on", "serverip": "121.228.209.175", "servermode": "off", "serverport": "8200", "storagemedia": "emmc", "subnetmask": "255.255.255.0", "timezone": "Asia/Shanghai", "timezoneflag": "0", "timezoneserver": "120.24.166.46", "volume": "60", "width": "128", "wificonnectmode": "static", "wifigateway": "192.168.11.1", "wifisubnetmask": "255.255.255.0"}}}[\r][\n]"
+DEBUG 16:07:24.274 org.apache.http.headers                                 122  - http-outgoing-0 << HTTP/1.1 200 OK
+DEBUG 16:07:24.274 org.apache.http.headers                                 125  - http-outgoing-0 << Server: nginx/1.10.1
+DEBUG 16:07:24.274 org.apache.http.headers                                 125  - http-outgoing-0 << Date: Mon, 02 Sep 2019 08:07:26 GMT
+DEBUG 16:07:24.274 org.apache.http.headers                                 125  - http-outgoing-0 << Content-Type: application/json
+DEBUG 16:07:24.274 org.apache.http.headers                                 125  - http-outgoing-0 << Transfer-Encoding: chunked
+DEBUG 16:07:24.274 org.apache.http.headers                                 125  - http-outgoing-0 << Connection: keep-alive
+DEBUG 16:07:24.274 org.apache.http.impl.execchain.MainClientExec           285  - Connection can be kept alive indefinitely
+DEBUG 16:07:24.274 org.apache.http.wire                                    73   - http-outgoing-0 << "0[\r][\n]"
+DEBUG 16:07:24.274 org.apache.http.wire                                    73   - http-outgoing-0 << "[\r][\n]"
+DEBUG 16:07:24.274 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 320  - Connection [id: 0][route: {}->http://192.168.100.202:80] can be kept alive indefinitely
+DEBUG 16:07:24.274 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 326  - Connection released: [id: 0][route: {}->http://192.168.100.202:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+INFO  16:07:24.284 onbon.y2.Y2Controller                                   624  - null> 04ce8c> getProperty         : 0.17s, reply = {
+  "remotefunction": {
+    "name": "getproperty",
+    "output": {
+      "apipaddress": "192.168.22.1",
+      "apssid": "onbon_yq",
+      "barcode": "C0Y0401807210014",
+      "brightness": "255",
+      "brightnessmode": "system",
+      "cloudip": "139.196.231.196",
+      "cloudport": "3802",
+      "clouduserid": "",
+      "controllername": "",
+      "controllertype": "8280",
+      "customscreenstatus": "",
+      "dnsserver": "192.168.100.1",
+      "firmwareversion": "19042400",
+      "foldcount": "1",
+      "foldheight": "[]",
+      "foldtype": "0",
+      "foldwidth": "[]",
+      "fpgaversion": "18060603",
+      "ftploginname": "",
+      "ftploginpassword": "",
+      "ftpserveraddr": "",
+      "ftpserverport": "",
+      "gateway": "192.168.100.1",
+      "height": "96",
+      "httpserverport": "80",
+      "i2cnum": "2",
+      "ip": "192.168.100.202",
+      "ipflag": "1",
+      "ipmode": "static",
+      "loglevel": "INFO",
+      "mac": "02:FF:FF:BF:C9:B1",
+      "optimizedspeed": "on",
+      "outputtype": "LCD",
+      "pid": "50C811344D45594D411000001E1BF50B",
+      "playerversion": "19042400",
+      "playlist": "lists/c274df1b33f6f95bb15773455fb9d2cc.xml",
+      "programlockedname": "",
+      "programlockedstatus": "off",
+      "reliedversion": "10010100",
+      "restartnetwork": "completed",
+      "scheduletaskflag": "false",
+      "screendata": "1",
+      "screenlockedstatus": "0",
+      "screenonoffstatus": "on",
+      "serverip": "121.228.209.175",
+      "servermode": "off",
+      "serverport": "8200",
+      "storagemedia": "emmc",
+      "subnetmask": "255.255.255.0",
+      "timezone": "Asia/Shanghai",
+      "timezoneflag": "0",
+      "timezoneserver": "120.24.166.46",
+      "volume": "60",
+      "width": "128",
+      "wificonnectmode": "static",
+      "wifigateway": "192.168.11.1",
+      "wifisubnetmask": "255.255.255.0"
+    }
+  }
+}
+INFO  16:07:24.284 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : apipaddress         = 192.168.22.1
+INFO  16:07:24.284 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : apssid              = onbon_yq
+INFO  16:07:24.284 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : barcode             = C0Y0401807210014
+INFO  16:07:24.284 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : brightness          = 255
+INFO  16:07:24.284 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : brightnessmode      = system
+INFO  16:07:24.284 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : cloudip             = 139.196.231.196
+INFO  16:07:24.284 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : cloudport           = 3802
+INFO  16:07:24.284 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : clouduserid         = 
+INFO  16:07:24.284 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : controllername      = 
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : controllertype      = 8280
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : customscreenstatus  = 
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : dnsserver           = 192.168.100.1
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : firmwareversion     = 19042400
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : foldcount           = 1
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : foldheight          = []
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : foldtype            = 0
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : foldwidth           = []
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : fpgaversion         = 18060603
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : ftploginname        = 
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : ftploginpassword    = 
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : ftpserveraddr       = 
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : ftpserverport       = 
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : gateway             = 192.168.100.1
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : height              = 96
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : httpserverport      = 80
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : i2cnum              = 2
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : ip                  = 192.168.100.202
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : ipflag              = 1
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : ipmode              = static
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : loglevel            = INFO
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : mac                 = 02:FF:FF:BF:C9:B1
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : optimizedspeed      = on
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : outputtype          = LCD
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : pid                 = 50C811344D45594D411000001E1BF50B
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : playerversion       = 19042400
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : playlist            = lists/c274df1b33f6f95bb15773455fb9d2cc.xml
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : programlockedname   = 
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : programlockedstatus = off
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : reliedversion       = 10010100
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : restartnetwork      = completed
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : scheduletaskflag    = false
+INFO  16:07:24.294 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : screendata          = 1
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : screenlockedstatus  = 0
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : screenonoffstatus   = on
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : serverip            = 121.228.209.175
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : servermode          = off
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : serverport          = 8200
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : storagemedia        = emmc
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : subnetmask          = 255.255.255.0
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : timezone            = Asia/Shanghai
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : timezoneflag        = 0
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : timezoneserver      = 120.24.166.46
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : volume              = 60
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : width               = 128
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : wificonnectmode     = static
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : wifigateway         = 192.168.11.1
+INFO  16:07:24.304 onbon.y2.Y2Controller                                   346  - > 04ce8c> getProperty         : wifisubnetmask      = 255.255.255.0
+INFO  16:07:24.334 onbon.y2.Y2UploadManager                                163  - > upload> open
+INFO  16:07:24.334 onbon.y2.Y2Controller                                   597  - > 04ce8c> enableUploadDownload: req = {
+  "protocol": {
+    "name": "YQ-COM2",
+    "version": "1.0",
+    "remotefunction": {
+      "name": "enableUploadDownload",
+      "input": {
+        "type": "upload",
+        "flag": "on"
+      }
+    }
+  }
+}
+DEBUG 16:07:24.334 org.apache.http.client.protocol.RequestAddCookies       123  - CookieSpec selected: default
+DEBUG 16:07:24.334 org.apache.http.client.protocol.RequestAuthCache        77   - Auth cache not set in the context
+DEBUG 16:07:24.334 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 255  - Connection request: [route: {}->http://192.168.100.202:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 16:07:24.334 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 288  - Connection leased: [id: 0][route: {}->http://192.168.100.202:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 16:07:24.334 org.apache.http.impl.execchain.MainClientExec           256  - Executing request POST /;stok=04ce8c23a9119264c5a315fc6d3e7c37 HTTP/1.1
+DEBUG 16:07:24.334 org.apache.http.impl.execchain.MainClientExec           261  - Target auth state: UNCHALLENGED
+DEBUG 16:07:24.334 org.apache.http.impl.execchain.MainClientExec           267  - Proxy auth state: UNCHALLENGED
+DEBUG 16:07:24.334 org.apache.http.headers                                 133  - http-outgoing-0 >> POST /;stok=04ce8c23a9119264c5a315fc6d3e7c37 HTTP/1.1
+DEBUG 16:07:24.334 org.apache.http.headers                                 136  - http-outgoing-0 >> Content-Length: 208
+DEBUG 16:07:24.334 org.apache.http.headers                                 136  - http-outgoing-0 >> Content-Type: application/json; charset=UTF-8
+DEBUG 16:07:24.334 org.apache.http.headers                                 136  - http-outgoing-0 >> Host: 192.168.100.202
+DEBUG 16:07:24.334 org.apache.http.headers                                 136  - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG 16:07:24.334 org.apache.http.headers                                 136  - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+DEBUG 16:07:24.334 org.apache.http.headers                                 136  - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG 16:07:24.334 org.apache.http.wire                                    73   - http-outgoing-0 >> "POST /;stok=04ce8c23a9119264c5a315fc6d3e7c37 HTTP/1.1[\r][\n]"
+DEBUG 16:07:24.334 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Length: 208[\r][\n]"
+DEBUG 16:07:24.334 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+DEBUG 16:07:24.334 org.apache.http.wire                                    73   - http-outgoing-0 >> "Host: 192.168.100.202[\r][\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)[\r][\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "[\r][\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "{[\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "  "protocol": {[\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "name": "YQ-COM2",[\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "version": "1.0",[\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "remotefunction": {[\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "      "name": "enableUploadDownload",[\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "      "input": {[\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "type": "upload",[\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "flag": "on"[\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "      }[\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "    }[\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    73   - http-outgoing-0 >> "  }[\n]"
+DEBUG 16:07:24.344 org.apache.http.wire                                    87   - http-outgoing-0 >> "}"
+DEBUG 16:07:24.394 org.apache.http.wire                                    73   - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG 16:07:24.394 org.apache.http.wire                                    73   - http-outgoing-0 << "Server: nginx/1.10.1[\r][\n]"
+DEBUG 16:07:24.394 org.apache.http.wire                                    73   - http-outgoing-0 << "Date: Mon, 02 Sep 2019 08:07:26 GMT[\r][\n]"
+DEBUG 16:07:24.394 org.apache.http.wire                                    73   - http-outgoing-0 << "Content-Type: application/json[\r][\n]"
+DEBUG 16:07:24.394 org.apache.http.wire                                    73   - http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG 16:07:24.394 org.apache.http.wire                                    73   - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+DEBUG 16:07:24.394 org.apache.http.wire                                    73   - http-outgoing-0 << "[\r][\n]"
+DEBUG 16:07:24.394 org.apache.http.wire                                    73   - http-outgoing-0 << "34[\r][\n]"
+DEBUG 16:07:24.394 org.apache.http.wire                                    73   - http-outgoing-0 << "{"remotefunction": {"name": "enableuploaddownload"}}[\r][\n]"
+DEBUG 16:07:24.394 org.apache.http.wire                                    73   - http-outgoing-0 << "0[\r][\n]"
+DEBUG 16:07:24.394 org.apache.http.wire                                    73   - http-outgoing-0 << "[\r][\n]"
+DEBUG 16:07:24.394 org.apache.http.headers                                 122  - http-outgoing-0 << HTTP/1.1 200 OK
+DEBUG 16:07:24.394 org.apache.http.headers                                 125  - http-outgoing-0 << Server: nginx/1.10.1
+DEBUG 16:07:24.394 org.apache.http.headers                                 125  - http-outgoing-0 << Date: Mon, 02 Sep 2019 08:07:26 GMT
+DEBUG 16:07:24.394 org.apache.http.headers                                 125  - http-outgoing-0 << Content-Type: application/json
+DEBUG 16:07:24.394 org.apache.http.headers                                 125  - http-outgoing-0 << Transfer-Encoding: chunked
+DEBUG 16:07:24.394 org.apache.http.headers                                 125  - http-outgoing-0 << Connection: keep-alive
+DEBUG 16:07:24.394 org.apache.http.impl.execchain.MainClientExec           285  - Connection can be kept alive indefinitely
+DEBUG 16:07:24.394 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 320  - Connection [id: 0][route: {}->http://192.168.100.202:80] can be kept alive indefinitely
+DEBUG 16:07:24.404 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 326  - Connection released: [id: 0][route: {}->http://192.168.100.202:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+INFO  16:07:24.404 onbon.y2.Y2Controller                                   624  - > 04ce8c> enableUploadDownload: 0.07s, reply = {
+  "remotefunction": {
+    "name": "enableuploaddownload"
+  }
+}
+INFO  16:07:24.404 onbon.y2.play.DynamicAreaTextUnit                       215  - dynamc> area.1 , size:(0 0 128 48)
+INFO  16:07:24.664 onbon.y2.play.DynamicAreaTextUnit                       333  - dynamc> area.1 , pic:1, _1a91a1bcc96f0879c30c535f6e56f4704, size:285
+INFO  16:07:24.664 onbon.y2.play.DynamicAreaTextUnit                       215  - dynamc> area.2 , size:(0 48 128 48)
+INFO  16:07:24.674 onbon.y2.play.DynamicAreaTextUnit                       333  - dynamc> area.2 , pic:1, _2a91a1bcc96f0879c30c535f6e56f4704, size:285
+INFO  16:07:24.684 onbon.y2.Y2Controller                                   444  - > 04ce8c> dynamics: cmd = {
+  "protocol": {
+    "name": "YQ-COM2",
+    "version": "1.0",
+    "remotefunction": {
+      "name": "updateDynamic",
+      "input": {
+        "immedidatePlay": "",
+        "cover": "0",
+        "dynamics": [
+          {
+            "id": "1",
+            "xcoord": "0",
+            "ycoord": "0",
+            "width": "128",
+            "height": "48",
+            "transparency": "100",
+            "relativeProgram": "",
+            "runMode": "0",
+            "updateFrequency": "0",
+            "unit": [
+              {
+                "type": "Picture",
+                "order": "1",
+                "stuntType": "52",
+                "stuntSpeed": "8",
+                "stayTime": "5",
+                "content": "_1a91a1bcc96f0879c30c535f6e56f4704",
+                "gifFlag": "0"
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "xcoord": "0",
+            "ycoord": "48",
+            "width": "128",
+            "height": "48",
+            "transparency": "100",
+            "relativeProgram": "",
+            "runMode": "0",
+            "updateFrequency": "0",
+            "unit": [
+              {
+                "type": "Picture",
+                "order": "1",
+                "stuntType": "52",
+                "stuntSpeed": "8",
+                "stayTime": "5",
+                "content": "_2a91a1bcc96f0879c30c535f6e56f4704",
+                "gifFlag": "0"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
+DEBUG 16:07:24.694 org.apache.http.client.protocol.RequestAddCookies       123  - CookieSpec selected: default
+DEBUG 16:07:24.694 org.apache.http.client.protocol.RequestAuthCache        77   - Auth cache not set in the context
+DEBUG 16:07:24.694 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 255  - Connection request: [route: {}->http://192.168.100.202:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 16:07:24.694 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 288  - Connection leased: [id: 0][route: {}->http://192.168.100.202:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 16:07:24.704 org.apache.http.impl.execchain.MainClientExec           256  - Executing request POST /dynamic/;stok=04ce8c23a9119264c5a315fc6d3e7c37 HTTP/1.1
+DEBUG 16:07:24.704 org.apache.http.impl.execchain.MainClientExec           261  - Target auth state: UNCHALLENGED
+DEBUG 16:07:24.704 org.apache.http.impl.execchain.MainClientExec           267  - Proxy auth state: UNCHALLENGED
+DEBUG 16:07:24.704 org.apache.http.headers                                 133  - http-outgoing-0 >> POST /dynamic/;stok=04ce8c23a9119264c5a315fc6d3e7c37 HTTP/1.1
+DEBUG 16:07:24.704 org.apache.http.headers                                 136  - http-outgoing-0 >> Accept: */*
+DEBUG 16:07:24.704 org.apache.http.headers                                 136  - http-outgoing-0 >> Content-Length: 2500
+DEBUG 16:07:24.704 org.apache.http.headers                                 136  - http-outgoing-0 >> Content-Type: multipart/form-data; boundary=dyn1567411644694
+DEBUG 16:07:24.704 org.apache.http.headers                                 136  - http-outgoing-0 >> Host: 192.168.100.202
+DEBUG 16:07:24.704 org.apache.http.headers                                 136  - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG 16:07:24.704 org.apache.http.headers                                 136  - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+DEBUG 16:07:24.704 org.apache.http.headers                                 136  - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "POST /dynamic/;stok=04ce8c23a9119264c5a315fc6d3e7c37 HTTP/1.1[\r][\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "Accept: */*[\r][\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Length: 2500[\r][\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Type: multipart/form-data; boundary=dyn1567411644694[\r][\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "Host: 192.168.100.202[\r][\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)[\r][\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "[\r][\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "--dyn1567411644694[\r][\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Disposition: form-data; name="command"[\r][\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "[\r][\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "{[\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "  "protocol": {[\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "name": "YQ-COM2",[\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "version": "1.0",[\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "remotefunction": {[\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "      "name": "updateDynamic",[\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "      "input": {[\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "immedidatePlay": "",[\n]"
+DEBUG 16:07:24.704 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "cover": "0",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "dynamics": [[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "          {[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "id": "1",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "xcoord": "0",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "ycoord": "0",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "width": "128",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "height": "48",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "transparency": "100",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "relativeProgram": "",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "runMode": "0",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "updateFrequency": "0",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "unit": [[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "              {[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "                "type": "Picture",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "                "order": "1",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "                "stuntType": "52",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "                "stuntSpeed": "8",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "                "stayTime": "5",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "                "content": "_1a91a1bcc96f0879c30c535f6e56f4704",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "                "gifFlag": "0"[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "              }[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            ][\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "          },[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "          {[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "id": "2",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "xcoord": "0",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "ycoord": "48",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "width": "128",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "height": "48",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "transparency": "100",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "relativeProgram": "",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "runMode": "0",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "updateFrequency": "0",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            "unit": [[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "              {[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "                "type": "Picture",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "                "order": "1",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "                "stuntType": "52",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "                "stuntSpeed": "8",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "                "stayTime": "5",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "                "content": "_2a91a1bcc96f0879c30c535f6e56f4704",[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "                "gifFlag": "0"[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "              }[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "            ][\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "          }[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "        ][\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "      }[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "    }[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    73   - http-outgoing-0 >> "  }[\n]"
+DEBUG 16:07:24.714 org.apache.http.wire                                    87   - http-outgoing-0 >> "}"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "[\r][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "--dyn1567411644694[\r][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Disposition: form-data; name="_1a91a1bcc96f0879c30c535f6e56f4704"; filename="_1a91a1bcc96f0879c30c535f6e56f4704.png"[\r][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Type: image/png[\r][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "[\r][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "[0x89]PNG[\r][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "[0x1a][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "[0x0][0x0][0x0][\r]IHDR[0x0][0x0][0x0][0x80][0x0][0x0][0x0]0[0x8][0x6][0x0][0x0][0x0][0xd9][0xf4]r[0xbe][0x0][0x0][0x0][0xe4]IDATx[0xda][0xed][0xd9]K[0xe][0x83]0[0xc]@A[0xdf][0xff][0xd2][0xee][0xba][0x95]Bm[0xab]|;[0x8b][0xb7][0xa1]AHd[0x14][0x2][0x8d][0x88]H[0xfd]un[0x2][0x0][0x2]@[0x0][0x8][0x0][0x1] [0x0][0x4][0x80][0x0][0x10][0x0][0x2]@[0x0][0x8][0x0][0x1] [0x0][0x4][0x80][0x0][0xd0][0xa3][0x1][0xe4]b`~[0xd4][0xfd]}[0xeb][0x1a][0xb9]hu[\r][0x93][0xb6][0x3][0x80]o7~[0xeb]X6&*[0x17][0xe3][0xa3][0x81][0x6][0x82][0x83]W[0x80][0x1c]L[0xc8]/[0x1][0x98][0xf0][0x8b][0x3][0x88][0xe6]9[0x0][0xdc]p[0xf][0xd0][0x19]7}dd[0x1][0x8e]}[0xc0][0x5][0x0]t[0x96][0xf7]*[0x80]h[0xee]) 8[0x9][0xc0][0x4][0xc8][0x1e][0x9b]>[0x0]N[0x0][0xd0][0xb9][0xe9]Yx[0xcd]K[0x0][0xee][0xf5][0x1d]`[0xfa][0xcc][0x8f][0xc1][0x8a][0x0][0xc0]C_[0x3][0xa7][0x8f][0x8]{[0x80][0x3]?[0x4]eq[0x9][0xef]~[0x9][0xac]^#[\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "[0xe7][0x9b]8[0xff][0x5][0x8][0x0][0x1] [0x0][0x4][0x80][0x0][0x10][0x0][0x2]@[0x0][0x8][0x0][0x1] [0x0][0x4][0x80][0x0][0x10][0x0][0x2]@[0x0][0x8][0x0][0x1][0xa0][0xb7]^[0xd2][0x88]r[0xdf]l[0xc0][0xb4][0x0][0x0][0x0][0x0]IEND[0xae]B`[0x82][\r][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "--dyn1567411644694[\r][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Disposition: form-data; name="_2a91a1bcc96f0879c30c535f6e56f4704"; filename="_2a91a1bcc96f0879c30c535f6e56f4704.png"[\r][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Type: image/png[\r][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "[\r][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "[0x89]PNG[\r][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "[0x1a][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "[0x0][0x0][0x0][\r]IHDR[0x0][0x0][0x0][0x80][0x0][0x0][0x0]0[0x8][0x6][0x0][0x0][0x0][0xd9][0xf4]r[0xbe][0x0][0x0][0x0][0xe4]IDATx[0xda][0xed][0xd9]K[0xe][0x83]0[0xc]@A[0xdf][0xff][0xd2][0xee][0xba][0x95]Bm[0xab]|;[0x8b][0xb7][0xa1]AHd[0x14][0x2][0x8d][0x88]H[0xfd]un[0x2][0x0][0x2]@[0x0][0x8][0x0][0x1] [0x0][0x4][0x80][0x0][0x10][0x0][0x2]@[0x0][0x8][0x0][0x1] [0x0][0x4][0x80][0x0][0xd0][0xa3][0x1][0xe4]b`~[0xd4][0xfd]}[0xeb][0x1a][0xb9]hu[\r][0x93][0xb6][0x3][0x80]o7~[0xeb]X6&*[0x17][0xe3][0xa3][0x81][0x6][0x82][0x83]W[0x80][0x1c]L[0xc8]/[0x1][0x98][0xf0][0x8b][0x3][0x88][0xe6]9[0x0][0xdc]p[0xf][0xd0][0x19]7}dd[0x1][0x8e]}[0xc0][0x5][0x0]t[0x96][0xf7]*[0x80]h[0xee]) 8[0x9][0xc0][0x4][0xc8][0x1e][0x9b]>[0x0]N[0x0][0xd0][0xb9][0xe9]Yx[0xcd]K[0x0][0xee][0xf5][0x1d]`[0xfa][0xcc][0x8f][0xc1][0x8a][0x0][0xc0]C_[0x3][0xa7][0x8f][0x8]{[0x80][0x3]?[0x4]eq[0x9][0xef]~[0x9][0xac]^#[\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "[0xe7][0x9b]8[0xff][0x5][0x8][0x0][0x1] [0x0][0x4][0x80][0x0][0x10][0x0][0x2]@[0x0][0x8][0x0][0x1] [0x0][0x4][0x80][0x0][0x10][0x0][0x2]@[0x0][0x8][0x0][0x1][0xa0][0xb7]^[0xd2][0x88]r[0xdf]l[0xc0][0xb4][0x0][0x0][0x0][0x0]IEND[0xae]B`[0x82][\r][\n]"
+DEBUG 16:07:24.724 org.apache.http.wire                                    73   - http-outgoing-0 >> "--dyn1567411644694--[\r][\n]"
+DEBUG 16:07:25.086 org.apache.http.wire                                    73   - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG 16:07:25.086 org.apache.http.wire                                    73   - http-outgoing-0 << "Server: nginx/1.10.1[\r][\n]"
+DEBUG 16:07:25.086 org.apache.http.wire                                    73   - http-outgoing-0 << "Date: Mon, 02 Sep 2019 08:07:27 GMT[\r][\n]"
+DEBUG 16:07:25.086 org.apache.http.wire                                    73   - http-outgoing-0 << "Content-Type: application/json[\r][\n]"
+DEBUG 16:07:25.086 org.apache.http.wire                                    73   - http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG 16:07:25.086 org.apache.http.wire                                    73   - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+DEBUG 16:07:25.086 org.apache.http.wire                                    73   - http-outgoing-0 << "[\r][\n]"
+DEBUG 16:07:25.086 org.apache.http.wire                                    73   - http-outgoing-0 << "2d[\r][\n]"
+DEBUG 16:07:25.086 org.apache.http.wire                                    73   - http-outgoing-0 << "{"remotefunction": {"name": "updatedynamic"}}[\r][\n]"
+DEBUG 16:07:25.086 org.apache.http.wire                                    73   - http-outgoing-0 << "0[\r][\n]"
+DEBUG 16:07:25.086 org.apache.http.wire                                    73   - http-outgoing-0 << "[\r][\n]"
+DEBUG 16:07:25.086 org.apache.http.headers                                 122  - http-outgoing-0 << HTTP/1.1 200 OK
+DEBUG 16:07:25.086 org.apache.http.headers                                 125  - http-outgoing-0 << Server: nginx/1.10.1
+DEBUG 16:07:25.086 org.apache.http.headers                                 125  - http-outgoing-0 << Date: Mon, 02 Sep 2019 08:07:27 GMT
+DEBUG 16:07:25.086 org.apache.http.headers                                 125  - http-outgoing-0 << Content-Type: application/json
+DEBUG 16:07:25.086 org.apache.http.headers                                 125  - http-outgoing-0 << Transfer-Encoding: chunked
+DEBUG 16:07:25.096 org.apache.http.headers                                 125  - http-outgoing-0 << Connection: keep-alive
+DEBUG 16:07:25.096 org.apache.http.impl.execchain.MainClientExec           285  - Connection can be kept alive indefinitely
+DEBUG 16:07:25.096 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 320  - Connection [id: 0][route: {}->http://192.168.100.202:80] can be kept alive indefinitely
+DEBUG 16:07:25.096 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 326  - Connection released: [id: 0][route: {}->http://192.168.100.202:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+INFO  16:07:25.096 onbon.y2.Y2Controller                                   458  - > 04ce8c> dynamic             : 0.412s, 200
+INFO  16:07:25.096 onbon.y2.Y2Controller                                   465  - > 04ce8c> reply = {"remotefunction": {"name": "updatedynamic"}}
+INFO  16:07:25.096 onbon.y2.Y2UploadManager                                177  - > upload> close
+INFO  16:07:25.106 onbon.y2.Y2Controller                                   597  - > 04ce8c> enableUploadDownload: req = {
+  "protocol": {
+    "name": "YQ-COM2",
+    "version": "1.0",
+    "remotefunction": {
+      "name": "enableUploadDownload",
+      "input": {
+        "type": "upload",
+        "flag": "off"
+      }
+    }
+  }
+}
+DEBUG 16:07:25.106 org.apache.http.client.protocol.RequestAddCookies       123  - CookieSpec selected: default
+DEBUG 16:07:25.106 org.apache.http.client.protocol.RequestAuthCache        77   - Auth cache not set in the context
+DEBUG 16:07:25.106 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 255  - Connection request: [route: {}->http://192.168.100.202:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 16:07:25.106 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 288  - Connection leased: [id: 0][route: {}->http://192.168.100.202:80][total kept alive: 0; route allocated: 1 of 2; total allocated: 1 of 20]
+DEBUG 16:07:25.106 org.apache.http.impl.execchain.MainClientExec           256  - Executing request POST /;stok=04ce8c23a9119264c5a315fc6d3e7c37 HTTP/1.1
+DEBUG 16:07:25.106 org.apache.http.impl.execchain.MainClientExec           261  - Target auth state: UNCHALLENGED
+DEBUG 16:07:25.106 org.apache.http.impl.execchain.MainClientExec           267  - Proxy auth state: UNCHALLENGED
+DEBUG 16:07:25.106 org.apache.http.headers                                 133  - http-outgoing-0 >> POST /;stok=04ce8c23a9119264c5a315fc6d3e7c37 HTTP/1.1
+DEBUG 16:07:25.106 org.apache.http.headers                                 136  - http-outgoing-0 >> Content-Length: 209
+DEBUG 16:07:25.106 org.apache.http.headers                                 136  - http-outgoing-0 >> Content-Type: application/json; charset=UTF-8
+DEBUG 16:07:25.106 org.apache.http.headers                                 136  - http-outgoing-0 >> Host: 192.168.100.202
+DEBUG 16:07:25.106 org.apache.http.headers                                 136  - http-outgoing-0 >> Connection: Keep-Alive
+DEBUG 16:07:25.106 org.apache.http.headers                                 136  - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
+DEBUG 16:07:25.106 org.apache.http.headers                                 136  - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "POST /;stok=04ce8c23a9119264c5a315fc6d3e7c37 HTTP/1.1[\r][\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Length: 209[\r][\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "Host: 192.168.100.202[\r][\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)[\r][\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "[\r][\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "{[\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "  "protocol": {[\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "name": "YQ-COM2",[\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "version": "1.0",[\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "    "remotefunction": {[\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "      "name": "enableUploadDownload",[\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "      "input": {[\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "type": "upload",[\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "        "flag": "off"[\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "      }[\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "    }[\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    73   - http-outgoing-0 >> "  }[\n]"
+DEBUG 16:07:25.116 org.apache.http.wire                                    87   - http-outgoing-0 >> "}"
+DEBUG 16:07:25.176 org.apache.http.wire                                    73   - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG 16:07:25.176 org.apache.http.wire                                    73   - http-outgoing-0 << "Server: nginx/1.10.1[\r][\n]"
+DEBUG 16:07:25.176 org.apache.http.wire                                    73   - http-outgoing-0 << "Date: Mon, 02 Sep 2019 08:07:27 GMT[\r][\n]"
+DEBUG 16:07:25.176 org.apache.http.wire                                    73   - http-outgoing-0 << "Content-Type: application/json[\r][\n]"
+DEBUG 16:07:25.186 org.apache.http.wire                                    73   - http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG 16:07:25.186 org.apache.http.wire                                    73   - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+DEBUG 16:07:25.186 org.apache.http.wire                                    73   - http-outgoing-0 << "[\r][\n]"
+DEBUG 16:07:25.186 org.apache.http.wire                                    73   - http-outgoing-0 << "34[\r][\n]"
+DEBUG 16:07:25.186 org.apache.http.wire                                    73   - http-outgoing-0 << "{"remotefunction": {"name": "enableuploaddownload"}}[\r][\n]"
+DEBUG 16:07:25.186 org.apache.http.wire                                    73   - http-outgoing-0 << "0[\r][\n]"
+DEBUG 16:07:25.186 org.apache.http.wire                                    73   - http-outgoing-0 << "[\r][\n]"
+DEBUG 16:07:25.186 org.apache.http.headers                                 122  - http-outgoing-0 << HTTP/1.1 200 OK
+DEBUG 16:07:25.186 org.apache.http.headers                                 125  - http-outgoing-0 << Server: nginx/1.10.1
+DEBUG 16:07:25.186 org.apache.http.headers                                 125  - http-outgoing-0 << Date: Mon, 02 Sep 2019 08:07:27 GMT
+DEBUG 16:07:25.186 org.apache.http.headers                                 125  - http-outgoing-0 << Content-Type: application/json
+DEBUG 16:07:25.186 org.apache.http.headers                                 125  - http-outgoing-0 << Transfer-Encoding: chunked
+DEBUG 16:07:25.186 org.apache.http.headers                                 125  - http-outgoing-0 << Connection: keep-alive
+DEBUG 16:07:25.186 org.apache.http.impl.execchain.MainClientExec           285  - Connection can be kept alive indefinitely
+DEBUG 16:07:25.186 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 320  - Connection [id: 0][route: {}->http://192.168.100.202:80] can be kept alive indefinitely
+DEBUG 16:07:25.186 org.apache.http.impl.conn.PoolingHttpClientConnectionManager 326  - Connection released: [id: 0][route: {}->http://192.168.100.202:80][total kept alive: 1; route allocated: 1 of 2; total allocated: 1 of 20]
+INFO  16:07:25.186 onbon.y2.Y2Controller                                   624  - > 04ce8c> enableUploadDownload: 0.08s, reply = {
+  "remotefunction": {
+    "name": "enableuploaddownload"
+  }
+}
