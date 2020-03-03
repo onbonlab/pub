@@ -123,6 +123,21 @@ else
     System.out.println(error);
 }
 ```
+
+### 2.4.1 ping命令
+```java 
+screen.ping();  // ping命令
+```
+### 2.4.2 校时命令
+```java 
+screen.syncTime(); // 校时命令
+```
+### 2.4.3开关机命令
+```java 
+screen.turnOn(); // 开机命令
+screen.turnOff(); // 关机命令
+```
+
 ## 2.5 设置屏参
 以下为设置屏参方法
 注意：显示屏参数只需要在显示屏安装后使用一次即可。没有必要每次发送节目前都设置。
