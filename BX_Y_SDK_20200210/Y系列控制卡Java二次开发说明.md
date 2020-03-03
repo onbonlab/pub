@@ -151,7 +151,10 @@ parea.addPage("E:/pic/pic01.bmp");
 
 时间区
 ```java 
+// 位置固定，大小自动调整
 DateTimeArea area = new DateTimeArea( 0,0 );
+// 位置固定，大小固定
+DateTimeArea area = new DateTimeArea(0,0,128,96);
 area.horizontalAlignment( AlignmentType.NEAR );
 area.addUnits( DateTimePattern.YY_MM_DD1).fgColor(Color.red).getFont().setSize( 12 );
 
@@ -160,7 +163,7 @@ area2.horizontalAlignment( AlignmentType.NEAR );
 area2.addUnits(DateTimePattern.HH_MM_SS).fgColor(Color.red).getFont
 ```
 
-##2.6 动态区
+## 2.6 动态区
 动态区为特殊区域，可以单独播放，也可以和节目一起播放。动态区中的内容可以是图片，也可以是文本。
 ```java 
 // 动态区
